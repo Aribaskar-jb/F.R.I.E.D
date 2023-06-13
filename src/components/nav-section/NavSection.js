@@ -30,7 +30,14 @@ NavItem.propTypes = {
 };
 
 function NavItem({ item }) {
+  if(item.title === 'product'){
+    item.title = 'food recommendation';
+  }
+  if(item.title === 'user'){
+    item.title = 'Family';
+  }
   const { title, path, icon, info } = item;
+
 
   return (
     <StyledNavItem
