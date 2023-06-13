@@ -12,20 +12,35 @@ export default function LoginForm() {
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleClick = () => {
-    navigate('/dashboard', { replace: true });
+    if (email === 'fried@fried.com' || password === 'Fried123') {
+      navigate('/dashboard', { replace: true });
+    }
+    setEmail('');
+    setPassword('');
   };
 
   return (
     <>
       <Stack spacing={3}>
-        <TextField name="email" label="Email address" />
+        <TextField
+          name="email"
+          label="Email address"
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+          value={email}
+        />
 
         <TextField
           name="password"
           label="Password"
+          value={password}
           type={showPassword ? 'text' : 'password'}
+          onChange={(e) => setPassword(e.target.value)}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">

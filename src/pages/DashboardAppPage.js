@@ -70,7 +70,7 @@ export default function DashboardAppPage() {
               ]}
               chartData={[
                 {
-                  name: 'Team A',
+                  name: 'Team ',
                   type: 'column',
                   fill: 'solid',
                   data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
@@ -79,7 +79,7 @@ export default function DashboardAppPage() {
                   name: 'Team B',
                   type: 'area',
                   fill: 'gradient',
-                  data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
+                  data: [90, 89, 87, 88, 86, 84.6, 82.4, 80.3, 78.2, 76, 74.5],
                 },
                 {
                   name: 'Team C',
